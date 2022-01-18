@@ -1,0 +1,36 @@
+.header {
+  padding-top: 4.3rem;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    padding-right: 3.4rem;
+  }
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+  }
+  &__link {
+    font-family: "Inter-Regular";
+    color: #b8becd;
+    font-size: 16px;
+    &_active {
+      font-family: "Inter-Medium";
+      color: #202336;
+      font-size: 16px;
+    }
+  }
+
+  .btn {
+    height: 4.4rem;
+    width: 13.2rem;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 1.5rem;
+    &-orange {
+      margin-left: 1.8rem;
+    }
+  }
+}
