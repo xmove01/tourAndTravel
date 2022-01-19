@@ -1,0 +1,19 @@
+.article {
+  padding-top: 27rem;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
+    height: 33rem;
+  }
+  &__title {
+    line-height: 5rem;
+  }
+  &__text {
+    font-family: "Mulish-Light";
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #7d7987;
+    padding: 2rem 0 3rem 0;
+  }
+}

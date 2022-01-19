@@ -204,4 +204,27 @@ h2 {
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.article {
+  padding-top: 27rem;
+}
+
+.article__heading {
+  display: flex;
+  flex-direction: column;
+  max-width: 48rem;
+  height: 33rem;
+}
+
+.article__title {
+  line-height: 5rem;
+}
+
+.article__text {
+  font-family: "Mulish-Light";
+  font-size: 1.7rem;
+  line-height: 3rem;
+  color: #7d7987;
+  padding: 2rem 0 3rem 0;
+}
 /*# sourceMappingURL=style.css.map */
