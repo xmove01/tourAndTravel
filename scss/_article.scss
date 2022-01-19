@@ -1,5 +1,8 @@
 .article {
   padding-top: 27rem;
+  &-reverse {
+    flex-direction: row-reverse;
+  }
   &__heading {
     display: flex;
     flex-direction: column;

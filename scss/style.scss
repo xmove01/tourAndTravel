@@ -76,6 +76,13 @@ h2 {
   }
 }
 
+.link {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 1.7rem;
+  color: #fb8f1d;
+}
+
 @import "./header";
 @import "./stage";
 @import "./article";
+@import "./features";
