@@ -1,0 +1,67 @@
+.stage {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 7rem;
+  height: max-content;
+  &__heading {
+    max-height: 100%;
+  }
+  &__title {
+    font-family: "PlayfairDisplay-Bold", sans-serif;
+    color: #202336;
+    font-size: 6.4rem;
+    max-width: 36rem;
+    padding-bottom: 7.4rem;
+  }
+  &__text {
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 2.2rem;
+  }
+  .btn {
+    height: 5.2rem;
+    width: 18rem;
+    font-family: "Mulish-Bold", sans-serif;
+    font-size: 1.7rem;
+    grid-area: hf-btn;
+  }
+}
+
+.delimiter {
+  width: 3.2rem;
+  border-bottom: 2px solid #202336;
+}
+
+.holiday-finder {
+  width: max-content;
+  display: grid;
+  grid-template-areas:
+    "hf-text hf-text"
+    "location activity"
+    "grade date"
+    "hf-btn hf-btn";
+  grid-row-gap: 3.5rem;
+  grid-column-gap: 3rem;
+  .selector {
+    &:nth-child(1) {
+      grid-area: location;
+    }
+    &:nth-child(2) {
+      grid-area: activity;
+    }
+    &:nth-child(3) {
+      grid-area: grade;
+    }
+    &:nth-child(4) {
+      grid-area: date;
+    }
+  }
+  &__text {
+    grid-area: hf-text;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

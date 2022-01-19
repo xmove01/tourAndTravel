@@ -5,7 +5,7 @@ html {
 }
 
 .wrapper {
-  max-width: 122rem;
+  max-width: 129rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -38,4 +38,43 @@ h2 {
   font-size: 3.6rem;
 }
 
+.selector {
+  position: relative;
+  width: max-content;
+  &:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 0.590027L6 5.17003L10.59 0.590027L12 2.00003L6 8.00003L0 2.00003L1.41 0.590027Z' fill='%23C4C4C4'/%3E%3C/svg%3E")
+      center center no-repeat;
+    background-size: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 46%;
+    right: 4%;
+    z-index: 1;
+    margin-top: -3px;
+  }
+  select {
+    display: block;
+    width: 22rem;
+    height: 5.2rem;
+    padding: 0 3rem;
+    background: none;
+    border: 1px solid #afb0b9;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: "Inter-Regular";
+    font-size: 1.5rem;
+    color: #4a4c53;
+  }
+  select:focus {
+    outline: 0;
+    border-color: #fb8f1d;
+  }
+}
+
 @import "./header";
+@import "./stage";
