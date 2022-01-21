@@ -500,4 +500,83 @@ h2 {
   bottom: 0;
   left: 0;
 }
+
+.footer {
+  background-color: #f9f9fb;
+  margin-top: 10rem;
+}
+
+.footer .wrapper {
+  flex-direction: column;
+}
+
+.footer__about {
+  width: 30%;
+}
+
+.footer__nav {
+  padding-top: 1.5rem;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 2.2rem;
+  width: 20%;
+}
+
+.floor1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7.8rem 0 8rem 0;
+}
+
+.floor2 {
+  width: 100%;
+  border-top: 1px solid #c4c4c4;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about__text {
+  padding: 2.5rem 0 5.5rem 0;
+  font-family: "Mulish-Light";
+  font-size: 1.8rem;
+  color: #848484;
+}
+
+.about__copyright {
+  font-family: "Mulish-Light";
+  font-size: 1.7rem;
+  color: #848484;
+}
+
+.nav__block {
+  height: 100%;
+}
+
+.nav__block li {
+  padding-bottom: 2.4rem;
+}
+
+.nav__title {
+  font-family: "Mulish-Bold";
+  font-size: 1.9rem;
+  padding-bottom: 3.5rem;
+}
+
+.nav__link {
+  font-family: "Mulish-Light";
+  font-size: 1.7rem;
+  color: #848484;
+}
 /*# sourceMappingURL=style.css.map */
