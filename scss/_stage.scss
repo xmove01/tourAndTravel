@@ -4,7 +4,14 @@
   align-content: center;
   padding-top: 7rem;
   height: max-content;
+  &__picture {
+    max-width: 50%;
+    img {
+      width: 100%;
+    }
+  }
   &__heading {
+    max-width: 50%;
     max-height: 100%;
   }
   &__title {
@@ -64,4 +71,23 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+}
+
+// Устройства X-Large (большие настольные компьютеры, менее 1400 пикселей)
+@media (max-width: 1399.98px) {
+}
+
+// Устройства Large (настольные компьютеры, менее 1200 пикселей)
+@media (max-width: 1199.98px) {
+}
+
+// Устройства Medium (планшеты, менее 992 пикселей)
+@media (max-width: 992px) {
+}
+
+// Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
 }

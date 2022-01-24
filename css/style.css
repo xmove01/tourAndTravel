@@ -20,6 +20,7 @@ html {
 .wrapper {
   max-width: 129rem;
   margin: 0 auto;
+  padding: 0 1rem 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,16 +100,41 @@ h2 {
 }
 
 .header {
+  position: relative;
+  max-width: 129rem;
+  margin: 0 auto;
+}
+
+.header .wrapper {
   padding-top: 4.3rem;
+}
+
+.header__burger {
+  display: none;
 }
 
 .header__actions {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 4.4rem;
+}
+
+.header__actions .logo {
+  position: absolute;
+  left: 1rem;
+}
+
+.header__buttons {
+  display: flex;
+  position: absolute;
+  right: 1rem;
 }
 
 .header__menu {
   padding-right: 3.4rem;
+  position: absolute;
+  right: 29rem;
 }
 
 .header__navbar {
@@ -140,6 +166,160 @@ h2 {
   margin-left: 1.8rem;
 }
 
+.burger__menu {
+  position: absolute;
+  visibility: hidden;
+  top: -100vh;
+  padding: 7rem 2rem 2rem 2rem;
+  background-color: #ff8300eb;
+  width: 100%;
+  left: 0;
+}
+
+.burger__delimiter {
+  position: absolute;
+  left: 0;
+  top: 5.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.burger__delimiter span {
+  width: 99%;
+  border-bottom: 2px solid #1abe84;
+}
+
+.burger__navbar li {
+  padding-bottom: 2rem;
+}
+
+.burger__navbar li:last-child {
+  padding: 0;
+}
+
+.burger__link {
+  font-family: "Inter-Regular";
+  color: #fff;
+  font-size: 2rem;
+}
+
+.burger__link_active {
+  font-family: "Inter-Bold";
+  color: #202336;
+  font-size: 2.2rem;
+}
+
+.burger__btns {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  font-family: "Inter-Regular";
+  color: #1abe84;
+  font-size: 2.5rem;
+}
+
+.burger__btns :first-child {
+  padding-right: 1rem;
+}
+
+.burger__btns :last-child {
+  padding-left: 1rem;
+}
+
+.burger__btns a {
+  color: #fff;
+}
+
+#burger__checkbox {
+  opacity: 0;
+}
+
+.burger__btn > span,
+.burger__btn > span::before,
+.burger__btn > span::after {
+  z-index: 4;
+  display: block;
+  position: absolute;
+  top: 46%;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+}
+
+.burger__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.burger__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+#burger__checkbox:checked ~ .burger__btn > span {
+  transform: rotate(45deg);
+}
+
+#burger__checkbox:checked ~ .burger__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#burger__checkbox:checked ~ .burger__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#burger__checkbox:checked ~ .burger__menu {
+  visibility: visible;
+  top: 0;
+}
+
+.burger__btn > span,
+.burger__btn > span::before,
+.burger__btn > span::after {
+  transition-duration: 0.25s;
+}
+
+.burger__menu {
+  transition-duration: 0.45s;
+}
+
+@media (max-width: 992px) {
+  .header__buttons {
+    position: static;
+  }
+  .header__menu {
+    position: static;
+    padding: 0;
+  }
+  .header__actions {
+    justify-content: space-between;
+  }
+  .header__actions .logo {
+    position: static;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header .wrapper {
+    padding-top: 1rem;
+  }
+  .header__actions {
+    display: none;
+  }
+  .header__burger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .header__burger .logo {
+    z-index: 4;
+  }
+}
+
 .stage {
   display: flex;
   justify-content: space-between;
@@ -148,7 +328,16 @@ h2 {
   height: max-content;
 }
 
+.stage__picture {
+  max-width: 50%;
+}
+
+.stage__picture img {
+  width: 100%;
+}
+
 .stage__heading {
+  max-width: 50%;
   max-height: 100%;
 }
 

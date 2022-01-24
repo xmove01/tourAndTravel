@@ -1,12 +1,32 @@
 .header {
-  padding-top: 4.3rem;
-
+  position: relative;
+  max-width: 129rem;
+  margin: 0 auto;
+  .wrapper {
+    padding-top: 4.3rem;
+  }
+  &__burger {
+    display: none;
+  }
   &__actions {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: 4.4rem;
+    .logo {
+      position: absolute;
+      left: 1rem;
+    }
+  }
+  &__buttons {
+    display: flex;
+    position: absolute;
+    right: 1rem;
   }
   &__menu {
     padding-right: 3.4rem;
+    position: absolute;
+    right: 29rem;
   }
   &__navbar {
     display: flex;
@@ -33,4 +53,172 @@
       margin-left: 1.8rem;
     }
   }
+}
+
+.burger {
+  &__button {
+  }
+  &__menu {
+    position: absolute;
+    visibility: hidden;
+    top: -100vh;
+    padding: 7rem 2rem 2rem 2rem;
+    background-color: #ff8300eb;
+    width: 100%;
+    left: 0;
+  }
+  &__delimiter {
+    position: absolute;
+    left: 0;
+    top: 5.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    span {
+      width: 99%;
+      border-bottom: 2px solid #1abe84;
+    }
+  }
+  &__navbar {
+    li {
+      padding-bottom: 2rem;
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+  &__link {
+    font-family: "Inter-Regular";
+    color: #fff;
+    font-size: 2rem;
+    &_active {
+      font-family: "Inter-Bold";
+      color: #202336;
+      font-size: 2.2rem;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    font-family: "Inter-Regular";
+    color: #1abe84;
+    font-size: 2.5rem;
+    :first-child {
+      padding-right: 1rem;
+    }
+    :last-child {
+      padding-left: 1rem;
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+
+// прячем чекбокс
+#burger__checkbox {
+  opacity: 0;
+}
+
+// Рисуем кнопку бургера
+.burger__btn > span,
+.burger__btn > span::before,
+.burger__btn > span::after {
+  z-index: 4;
+  display: block;
+  position: absolute;
+  top: 46%;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+}
+.burger__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.burger__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+// Крутилка кнопки меню в крестик
+#burger__checkbox:checked ~ .burger__btn > span {
+  transform: rotate(45deg);
+}
+#burger__checkbox:checked ~ .burger__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#burger__checkbox:checked ~ .burger__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+// Если чекбокс чекнут - то выезжает меню
+#burger__checkbox:checked ~ .burger__menu {
+  visibility: visible;
+  top: 0;
+}
+
+// Плавность выезда меню, и превращения кнопки бургера в крестик
+.burger__btn > span,
+.burger__btn > span::before,
+.burger__btn > span::after {
+  transition-duration: 0.25s;
+}
+.burger__menu {
+  transition-duration: 0.45s;
+}
+
+// Устройства X-Large (большие настольные компьютеры, менее 1400 пикселей)
+@media (max-width: 1399.98px) {
+}
+
+// Устройства Large (настольные компьютеры, менее 1200 пикселей)
+@media (max-width: 1199.98px) {
+}
+
+// Устройства Medium (планшеты, менее 992 пикселей)
+@media (max-width: 992px) {
+  .header {
+    &__buttons {
+      position: static;
+    }
+    &__menu {
+      position: static;
+      padding: 0;
+    }
+    &__actions {
+      justify-content: space-between;
+      .logo {
+        position: static;
+      }
+    }
+  }
+}
+
+// Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
+@media (max-width: 767.98px) {
+  .header {
+    .wrapper {
+      padding-top: 1rem;
+    }
+
+    &__actions {
+      display: none;
+    }
+    &__burger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .logo {
+        z-index: 4;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
 }

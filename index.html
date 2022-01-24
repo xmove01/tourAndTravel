@@ -4,27 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore And Travel</title>
+    <title>Thousand Sunny</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./icomoon/style.css" />
   </head>
   <body>
-    <header class="header wrapper">
-      <div class="logo">
-        <img src="./img/logo.png" alt="logo" />
-      </div>
-      <div class="header__actions">
-        <nav class="header__menu">
-          <ul class="header__navbar">
-            <li><a href="#" class="header__link header__link_active">Home</a></li>
-            <li><a href="#" class="header__link">Destinations</a></li>
-            <li><a href="#" class="header__link">About</a></li>
-            <li><a href="#" class="header__link">Partner</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="btn btn-transparent">Login</a>
-        <a href="#" class="btn btn-orange">Register</a>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__burger">
+          <div class="burger__button">
+            <input id="burger__checkbox" type="checkbox" />
+            <label class="burger__btn" for="burger__checkbox">
+              <span></span>
+            </label>
+            <nav class="burger__menu">
+              <div class="burger__delimiter">
+                <span></span>
+              </div>
+              <ul class="burger__navbar">
+                <li><a href="#" class="burger__link burger__link_active">Home</a></li>
+                <li><a href="#" class="burger__link">Destinations</a></li>
+                <li><a href="#" class="burger__link">About</a></li>
+                <li><a href="#" class="burger__link">Partner</a></li>
+              </ul>
+              <div class="burger__btns"><a href="#">Login</a>|<a href="#">Register</a></div>
+            </nav>
+          </div>
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
+        </div>
+        <div class="header__actions">
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
+          <nav class="header__menu">
+            <ul class="header__navbar">
+              <li><a href="#" class="header__link header__link_active">Home</a></li>
+              <li><a href="#" class="header__link">Destinations</a></li>
+              <li><a href="#" class="header__link">About</a></li>
+              <li><a href="#" class="header__link">Partner</a></li>
+            </ul>
+          </nav>
+          <div class="header__buttons">
+            <a href="#" class="btn btn-transparent">Login</a>
+            <a href="#" class="btn btn-orange">Register</a>
+          </div>
+        </div>
       </div>
     </header>
     <section class="stage wrapper">
