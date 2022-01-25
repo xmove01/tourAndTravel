@@ -12,7 +12,7 @@
 }
 
 .testimonial {
-  width: 45rem;
+  max-width: 40%;
   &__grade {
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@
       content: " ";
       position: absolute;
       top: -1.7rem;
-      right: -1.7rem;
+      right: -1.8rem;
       z-index: -1;
       width: 4.2rem;
       height: 4.2rem;
@@ -129,15 +129,60 @@
 
 // Устройства Large (настольные компьютеры, менее 1200 пикселей)
 @media (max-width: 1199.98px) {
+  .testimonials {
+    &__body {
+      width: 95%;
+    }
+  }
 }
 
 // Устройства Medium (планшеты, менее 992 пикселей)
 @media (max-width: 992px) {
+  .testimonials {
+    &__body {
+      width: 100%;
+    }
+  }
+  .testimonial {
+  }
 }
 
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
-@media (max-width: 767.98px) {
+@media (max-width: 768.98px) {
+  .testimonials {
+    &__body {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .testimonial {
+    max-width: 80%;
+    padding-top: 3rem;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .testimonials {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+  .testimonial {
+    max-width: 95%;
+    padding-top: 3rem;
+    &__pic {
+      width: 90vw;
+      img {
+        object-position: 40% 0;
+      }
+    }
+    .author {
+      &__name {
+        font-size: 1.9rem;
+      }
+      &__post {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
