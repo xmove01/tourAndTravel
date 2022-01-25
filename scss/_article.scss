@@ -4,10 +4,10 @@
     flex-direction: row-reverse;
   }
   &__heading {
+    max-width: 40%;
     display: flex;
     flex-direction: column;
-    max-width: 48rem;
-    height: 33rem;
+    height: max-content;
   }
   &__title {
     line-height: 5rem;
@@ -19,6 +19,22 @@
     color: #7d7987;
     padding: 2rem 0 3rem 0;
   }
+  &__picture {
+    max-width: 60%;
+    text-align: left;
+    padding-right: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+.article-reverse {
+  .article {
+    &__picture {
+      padding-right: 0;
+      padding-left: 2rem;
+    }
+  }
 }
 
 // Устройства X-Large (большие настольные компьютеры, менее 1400 пикселей)
@@ -27,15 +43,69 @@
 
 // Устройства Large (настольные компьютеры, менее 1200 пикселей)
 @media (max-width: 1199.98px) {
+  .article {
+    padding-top: 15rem;
+    &__title {
+      font-size: 3.2rem;
+    }
+    &__text {
+      padding: 1rem 0 1.5rem 0;
+    }
+  }
 }
 
 // Устройства Medium (планшеты, менее 992 пикселей)
 @media (max-width: 992px) {
+  .article {
+    &__title {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    &__text {
+      font-size: 1.5rem;
+      padding: 0.7rem 0 1.2rem 0;
+    }
+  }
 }
 
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
+  .article {
+    flex-direction: column;
+    &__picture {
+      max-width: 80%;
+    }
+    &__heading {
+      padding-top: 2rem;
+      max-width: 90%;
+      align-items: center;
+      text-align: center;
+    }
+    &__picture {
+      padding: 0;
+    }
+  }
+  .article-reverse {
+    .article {
+      &__picture {
+        padding: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
+  .article {
+    padding-top: 10rem;
+    flex-direction: column;
+    &__picture {
+      max-width: 100%;
+    }
+    &__heading {
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 6vw;
+    }
+  }
 }
