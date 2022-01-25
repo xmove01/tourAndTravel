@@ -104,7 +104,7 @@
 @media (max-width: 992px) {
   .stage {
     &__title {
-      font-size: 4.5rem;
+      font-size: 4rem;
       padding-bottom: 3rem;
     }
     &__picture {
@@ -113,19 +113,26 @@
       }
     }
   }
+  .selector {
+    height: 4.7rem;
+    select {
+      padding: 0 3rem 0 1rem;
+    }
+  }
 }
 
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .stage {
     flex-direction: column-reverse;
     padding-top: 2rem;
     &__title {
+      font-size: 5rem;
       max-width: 100%;
       text-align: center;
     }
     &__heading {
-      max-width: 80%;
+      max-width: 90%;
       align-items: center;
     }
     &__picture {
@@ -165,8 +172,5 @@
     &__text {
       height: 3.7rem;
     }
-  }
-  .selector select {
-    height: 4.7rem;
   }
 }
