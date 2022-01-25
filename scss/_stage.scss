@@ -5,14 +5,18 @@
   padding-top: 7rem;
   height: max-content;
   &__picture {
-    max-width: 50%;
+    max-width: 60%;
+    padding-left: 2rem;
+    text-align: right;
     img {
       width: 100%;
     }
   }
   &__heading {
-    max-width: 50%;
+    max-width: 40%;
     max-height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   &__title {
     font-family: "PlayfairDisplay-Bold", sans-serif;
@@ -40,7 +44,12 @@
 }
 
 .holiday-finder {
-  width: max-content;
+  max-width: 47rem;
+  max-height: 34.4rem;
+  grid-template-columns:
+    minmax(15rem, 22rem)
+    minmax(15rem, 22rem);
+  grid-template-rows: repeat(4, 52px);
   display: grid;
   grid-template-areas:
     "hf-text hf-text"
@@ -50,16 +59,16 @@
   grid-row-gap: 3.5rem;
   grid-column-gap: 3rem;
   .selector {
-    &:nth-child(1) {
+    &:nth-child(2) {
       grid-area: location;
     }
-    &:nth-child(2) {
+    &:nth-child(3) {
       grid-area: activity;
     }
-    &:nth-child(3) {
+    &:nth-child(4) {
       grid-area: grade;
     }
-    &:nth-child(4) {
+    &:nth-child(5) {
       grid-area: date;
     }
   }
@@ -79,15 +88,85 @@
 
 // Устройства Large (настольные компьютеры, менее 1200 пикселей)
 @media (max-width: 1199.98px) {
+  .stage {
+    &__title {
+      font-size: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  .holiday-finder {
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.7rem;
+  }
 }
 
 // Устройства Medium (планшеты, менее 992 пикселей)
 @media (max-width: 992px) {
+  .stage {
+    &__title {
+      font-size: 4.5rem;
+      padding-bottom: 3rem;
+    }
+    &__picture {
+      img {
+        width: 90%;
+      }
+    }
+  }
 }
 
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
 @media (max-width: 767.98px) {
+  .stage {
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+    &__title {
+      max-width: 100%;
+      text-align: center;
+    }
+    &__heading {
+      max-width: 80%;
+      align-items: center;
+    }
+    &__picture {
+      max-width: 80%;
+      padding: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .holiday-finder {
+    max-width: 100%;
+    grid-template-columns:
+      minmax(15rem, 45vw)
+      minmax(15rem, 45vw);
+  }
 }
 
 @media (max-width: 575.98px) {
+  .stage {
+    &__heading {
+      max-width: 100%;
+    }
+    &__picture {
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 10vw;
+    }
+  }
+  .holiday-finder {
+    width: 100%;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+    &__text {
+      height: 3.7rem;
+    }
+  }
+  .selector select {
+    height: 4.7rem;
+  }
 }

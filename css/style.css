@@ -47,6 +47,17 @@ html {
   color: #fb8f1d;
 }
 
+.btn:hover {
+  box-shadow: -11.09px 18.13px 36.6483px rgba(242, 153, 74, 0.23);
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 13px -5px #000;
+  background: #fb8f1d;
+  color: #fff;
+  border: none;
+}
+
 h1,
 h2 {
   font-family: "PlayfairDisplay-Bold", sans-serif;
@@ -56,7 +67,7 @@ h2 {
 
 .selector {
   position: relative;
-  width: max-content;
+  width: 100%;
 }
 
 .selector:after {
@@ -76,7 +87,7 @@ h2 {
 
 .selector select {
   display: block;
-  width: 22rem;
+  width: 100%;
   height: 5.2rem;
   padding: 0 3rem;
   background: none;
@@ -241,7 +252,7 @@ h2 {
   z-index: 4;
   display: block;
   position: absolute;
-  top: 46%;
+  top: 56%;
   width: 25px;
   height: 2px;
   background-color: #000;
@@ -329,7 +340,9 @@ h2 {
 }
 
 .stage__picture {
-  max-width: 50%;
+  max-width: 60%;
+  padding-left: 2rem;
+  text-align: right;
 }
 
 .stage__picture img {
@@ -337,8 +350,10 @@ h2 {
 }
 
 .stage__heading {
-  max-width: 50%;
+  max-width: 40%;
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .stage__title {
@@ -368,26 +383,29 @@ h2 {
 }
 
 .holiday-finder {
-  width: max-content;
+  max-width: 47rem;
+  max-height: 34.4rem;
+  grid-template-columns: minmax(15rem, 22rem) minmax(15rem, 22rem);
+  grid-template-rows: repeat(4, 52px);
   display: grid;
   grid-template-areas: "hf-text hf-text" "location activity" "grade date" "hf-btn hf-btn";
   grid-row-gap: 3.5rem;
   grid-column-gap: 3rem;
 }
 
-.holiday-finder .selector:nth-child(1) {
+.holiday-finder .selector:nth-child(2) {
   grid-area: location;
 }
 
-.holiday-finder .selector:nth-child(2) {
+.holiday-finder .selector:nth-child(3) {
   grid-area: activity;
 }
 
-.holiday-finder .selector:nth-child(3) {
+.holiday-finder .selector:nth-child(4) {
   grid-area: grade;
 }
 
-.holiday-finder .selector:nth-child(4) {
+.holiday-finder .selector:nth-child(5) {
   grid-area: date;
 }
 
@@ -398,6 +416,77 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+@media (max-width: 1199.98px) {
+  .stage__title {
+    font-size: 5rem;
+    padding-bottom: 5rem;
+  }
+  .holiday-finder {
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.7rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .stage__title {
+    font-size: 4.5rem;
+    padding-bottom: 3rem;
+  }
+  .stage__picture img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .stage {
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+  }
+  .stage__title {
+    max-width: 100%;
+    text-align: center;
+  }
+  .stage__heading {
+    max-width: 80%;
+    align-items: center;
+  }
+  .stage__picture {
+    max-width: 80%;
+    padding: 0;
+  }
+  .stage__picture img {
+    width: 100%;
+  }
+  .holiday-finder {
+    max-width: 100%;
+    grid-template-columns: minmax(15rem, 45vw) minmax(15rem, 45vw);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stage__heading {
+    max-width: 100%;
+  }
+  .stage__picture {
+    max-width: 100%;
+  }
+  .stage__title {
+    font-size: 10vw;
+  }
+  .holiday-finder {
+    width: 100%;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .holiday-finder__text {
+    height: 3.7rem;
+  }
+  .selector select {
+    height: 4.7rem;
+  }
 }
 
 .article {
