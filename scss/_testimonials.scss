@@ -150,6 +150,7 @@
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
 @media (max-width: 768.98px) {
   .testimonials {
+    padding-top: 15rem;
     &__body {
       flex-direction: column-reverse;
     }
@@ -163,6 +164,7 @@
 
 @media (max-width: 575.98px) {
   .testimonials {
+    padding-top: 10rem;
     &__title {
       font-size: 3rem;
     }

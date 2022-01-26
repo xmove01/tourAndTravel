@@ -881,6 +881,9 @@ h2 {
 }
 
 @media (max-width: 768.98px) {
+  .testimonials {
+    padding-top: 15rem;
+  }
   .testimonials__body {
     flex-direction: column-reverse;
   }
@@ -891,6 +894,9 @@ h2 {
 }
 
 @media (max-width: 575.98px) {
+  .testimonials {
+    padding-top: 10rem;
+  }
   .testimonials__title {
     font-size: 3rem;
   }
@@ -915,7 +921,7 @@ h2 {
 .trending {
   padding-top: 27rem;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
 }
 
 .trending__text {
@@ -1004,6 +1010,7 @@ h2 {
 
 @media (max-width: 768.98px) {
   .trending {
+    padding-top: 15rem;
     max-width: 100%;
   }
   .story {
@@ -1012,6 +1019,9 @@ h2 {
 }
 
 @media (max-width: 575.98px) {
+  .trending {
+    padding-top: 10rem;
+  }
   .trending__list {
     grid-template-columns: 100%;
     width: 100%;
@@ -1072,8 +1082,7 @@ h2 {
 .floor2 {
   width: 100%;
   border-top: 1px solid #c4c4c4;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
 }
@@ -1109,5 +1118,83 @@ h2 {
   font-family: "Mulish-Light";
   font-size: 1.7rem;
   color: #848484;
+}
+
+@media (max-width: 992px) {
+  .floor1 {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 6rem 0 4rem 0;
+  }
+  .floor2 {
+    padding: 2rem 0;
+  }
+  .floor2 .social {
+    width: 25vw;
+  }
+  .footer__nav {
+    padding-top: 0;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .footer__about {
+    padding-top: 4rem;
+    width: 80%;
+  }
+  .about__text {
+    font-size: 1.5rem;
+    padding: 1.5rem 0 3rem 0;
+  }
+  .about__copyright {
+    font-size: 1.4rem;
+  }
+  .nav__link {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .footer__nav {
+    width: 95%;
+  }
+  .footer__about {
+    width: 95%;
+  }
+  .floor2 .social {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .floor1 {
+    padding: 3rem 0;
+  }
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+  .nav__block {
+    width: 15rem;
+    padding-bottom: 2rem;
+  }
+  .nav__block li {
+    padding-bottom: 2rem;
+  }
+  .nav__title {
+    font-size: 2.1rem;
+    padding-bottom: 2.5rem;
+  }
+  .nav__link {
+    font-size: 1.7rem;
+  }
+  .about__text {
+    font-size: 1.5rem;
+    padding: 1.5rem 0 3rem 0;
+  }
+  .about__copyright {
+    font-size: 1.4rem;
+  }
+  .floor2 .social {
+    width: 45vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

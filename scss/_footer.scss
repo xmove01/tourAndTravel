@@ -34,8 +34,7 @@
 .floor2 {
   width: 100%;
   border-top: 1px solid #c4c4c4;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
 }
@@ -85,11 +84,100 @@
 
 // Устройства Medium (планшеты, менее 992 пикселей)
 @media (max-width: 992px) {
+  .floor1 {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 6rem 0 4rem 0;
+  }
+
+  .floor2 {
+    padding: 2rem 0;
+    .social {
+      width: 25vw;
+    }
+  }
+  .footer {
+    &__nav {
+      padding-top: 0;
+      width: 80%;
+      justify-content: space-between;
+    }
+    &__about {
+      padding-top: 4rem;
+      width: 80%;
+    }
+  }
+  .about {
+    &__text {
+      font-size: 1.5rem;
+      padding: 1.5rem 0 3rem 0;
+    }
+    &__copyright {
+      font-size: 1.4rem;
+    }
+  }
+  .nav {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 // Устройства Small (телефоны с горизонтальной ориентацией, менее 768 пикселей)
-@media (max-width: 767.98px) {
+@media (max-width: 768.98px) {
+  .footer {
+    &__nav {
+      width: 95%;
+    }
+    &__about {
+      width: 95%;
+    }
+  }
+  .floor2 {
+    .social {
+      width: 30vw;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
+  .floor1 {
+    padding: 3rem 0;
+  }
+  .footer {
+    &__nav {
+      flex-wrap: wrap;
+    }
+  }
+  .nav {
+    &__block {
+      width: 15rem;
+      padding-bottom: 2rem;
+      li {
+        padding-bottom: 2rem;
+      }
+    }
+    &__title {
+      font-size: 2.1rem;
+      padding-bottom: 2.5rem;
+    }
+    &__link {
+      font-size: 1.7rem;
+    }
+  }
+  .about {
+    &__text {
+      font-size: 1.5rem;
+      padding: 1.5rem 0 3rem 0;
+    }
+    &__copyright {
+      font-size: 1.4rem;
+    }
+  }
+
+  .floor2 {
+    .social {
+      width: 45vw;
+    }
+  }
 }
